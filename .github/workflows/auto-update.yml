@@ -54,7 +54,7 @@ jobs:
           ver=$(grep release in.cinny.Cinny.appdata.xml | grep -m1 -oP '(?<=version=.)[^"]+')
           curl https://raw.githubusercontent.com/cinnyapp/cinny-desktop/v${ver}/src-tauri/Cargo.lock > Cargo.lock
           curl https://raw.githubusercontent.com/cinnyapp/cinny-desktop/v${ver}/package-lock.json > cinny-desktop-package-lock.json
-          curl https://raw.githubusercontent.com/cinnyapp/cinny/v${ver}/package-lock.json > cinny-package-lock.json
+          curl https://raw.githubusercontent.com/kfiven/cinny/flatpak-fix/package-lock.json > cinny-package-lock.json
           flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o cargo-sources.json Cargo.lock
           flatpak-node-generator --no-requests-cache --no-xdg-layout -o npm-cinny-desktop-sources.json npm cinny-desktop-package-lock.json
           flatpak-node-generator --no-requests-cache --no-xdg-layout -o npm-cinny-sources.json npm cinny-package-lock.json
