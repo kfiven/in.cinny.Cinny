@@ -35,8 +35,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libvips/libvips
-        tag: v8.13.3
-        commit: c76d74be657ce8302f140cefc2b665682c83b023
+        tag: v8.15.3
+        commit: 1a86d4e153536e035d1907652391a26f77cbe1b8
         x-checker-data:
           type: git
           tag-pattern: ^v((?:\d+.)*\d+)$
@@ -45,8 +45,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/cinnyapp/cinny-desktop.git
-        tag: v2.2.4
-        commit: 1c9e9ed1fa498e6f3bda82f78b6ff44806121619
+        tag: v4.2.1
+        commit: 5acc9eb61529ba6d60bb0df17372c5f7790b6114
         x-checker-data:
           type: git
           tag-pattern: ^v((?:\d+.)*\d+)$
